@@ -1,20 +1,12 @@
-# gradle-simple
+##### build the project
 
-[![](https://jitpack.io/v/jitpack/gradle-simple.svg?label=Release)](https://jitpack.io/#jitpack/gradle-simple)
+    ./gradlew build
 
-Example Gradle project producing a single jar. Uses the `maven` plugin to publish the jar to the local repository.
+##### build Docker image called java-app. Execute from root
 
-[https://jitpack.io/#jitpack/gradle-simple](https://jitpack.io/#jitpack/gradle-simple)
+    docker build -t java-app .
+    
+##### push image to repo 
 
-To install the library add: 
- 
-   ```gradle
-   repositories { 
-        jcenter()
-        maven { url "https://jitpack.io" }
-   }
-   dependencies {
-         implementation 'com.github.jitpack:gradle-simple:1.1'
-   }
-   ```  
-
+    docker tag java-app demo-app:java-1.0
+    
